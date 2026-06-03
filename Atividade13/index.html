@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4fb;
+            color: #1d2939;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: linear-gradient(135deg, #e7eefc 0%, #f9fbff 100%);
+        }
+
+        .card {
+            width: min(100%, 460px);
+            padding: 32px;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 1.9rem;
+            letter-spacing: -0.04em;
+        }
+
+        p.lead {
+            margin: 0 0 24px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 16px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            background: #f8fafc;
+            transition: border-color 0.2s ease, background 0.2s ease;
+            cursor: pointer;
+        }
+
+        label:hover {
+            background: #eef2ff;
+        }
+
+        input[type="radio"] {
+            accent-color: #2563eb;
+            transform: scale(1.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+            background: #f8fafc;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        button {
+            appearance: none;
+            border: none;
+            cursor: pointer;
+            padding: 14px 24px;
+            border-radius: 14px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #resultado {
+            margin-top: 26px;
+            padding: 18px 20px;
+            border-radius: 18px;
+            background: #eef2ff;
+            border: 1px solid #dbeafe;
+            min-height: 52px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: #1e293b;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 24px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="card">
+        <h1>Conversor de Texto</h1>
+        <p class="lead">Digite o texto, escolha como deseja converter e veja o resultado na hora.</p>
+
+        <div class="form-group">
+            <input type="text" id="inputText" placeholder="Digite algo...">
+
+            <fieldset style="border: none; padding: 0; margin: 0;">
+                <legend style="font-weight: 600; margin-bottom: 12px; color: #334155;">Escolha uma opção:</legend>
+                <label>
+                    <input type="radio" name="maisculo" value="Maisculo" checked>
+                    Maisculo
+                </label>
+                <label>
+                    <input type="radio" name="maisculo" value="Minusculo">
+                    Minusculo
+                </label>
+            </fieldset>
+
+            <div class="controls">
+                <button onclick="converterTexto()">Converter</button>
+            </div>
+
+            <p id="resultado">O resultado aparecerá aqui.</p>
+        </div>
+    </section>
+
+    <script>
+        function converterTexto() {
+            const inputText = document.getElementById('inputText').value.trim();
+            const maisculo = document.querySelector('input[name="maisculo"]:checked').value;
+            const resultadoElemento = document.getElementById('resultado');
+            let resultado = '';
+
+            if (!inputText) {
+                resultadoElemento.textContent = 'Por favor, digite algum texto para converter.';
+                return;
+            }
+
+            if (maisculo === 'Maisculo') {
+                resultado = inputText.toUpperCase();
+            } else {
+                resultado = inputText.toLowerCase();
+            }
+
+            resultadoElemento.textContent = resultado;
+        }
+    </script>
+</body>
+</html>
