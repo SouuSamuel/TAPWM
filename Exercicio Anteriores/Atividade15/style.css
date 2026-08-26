@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #e9f3f8;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #005c88;
+}
+
+p {
+    color: #444444;
+}
+
+select {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: 2px solid #00a7d1;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #005c88;
+}

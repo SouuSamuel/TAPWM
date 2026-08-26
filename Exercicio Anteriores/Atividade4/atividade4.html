@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedra Papel Tesoura</title>
+</head>
+<body>
+
+<h1>Pedra, Papel e Tesoura</h1>
+
+<p>Escolha uma opção:</p>
+
+<button onclick="jogar('pedra')">Pedra</button>
+<button onclick="jogar('papel')">Papel</button>
+<button onclick="jogar('tesoura')">Tesoura</button>
+
+<h2>Jogador:</h2>
+<img id="imgJogador" width="100">
+
+<h2>Computador:</h2>
+<img id="imgComputador" width="100">
+
+<h2 id="resultado"></h2>
+<h1 id="boom"></h1>
+
+<script>
+function jogar(escolhaJogador) {
+    let opcoes = ['pedra', 'papel', 'tesoura'];
+    let escolhaComputador = opcoes[Math.floor(Math.random() * 3)];
+
+    // imagens (pode trocar os links depois)
+    let imagens = {
+        pedra: "https://cdn.dooca.store/72923/products/cjcpfqreixcswo8sikcprc7mz1bs6rvmmjil_640x640+fill_ffffff.png?v=1744292798&webp=0",
+        papel: "https://cdn.awsli.com.br/300x300/463/463788/produto/25569933/b215457d8a.jpg",
+        tesoura: "https://images.tcdn.com.br/img/img_prod/406359/tesoura_escolar_multiuso_13cm_lamina_de_aco_inox_e_corpo_plastico_masterprint_mp502_3741_1_bbda60f9f34b62fcca20c6dbea7787e7_20220707124956.jpg"
+    };
+
+    document.getElementById("imgJogador").src = imagens[escolhaJogador];
+    document.getElementById("imgComputador").src = imagens[escolhaComputador];
+
+    let resultado = "";
+
+    if (escolhaJogador === escolhaComputador) {
+        resultado = "Empate!";
+    } else if (
+        (escolhaJogador === "pedra" && escolhaComputador === "tesoura") ||
+        (escolhaJogador === "papel" && escolhaComputador === "pedra") ||
+        (escolhaJogador === "tesoura" && escolhaComputador === "papel")
+    ) {
+        resultado = "Você venceu!";
+    } else {
+        resultado = "Computador venceu!";
+    }
+
+    document.getElementById("resultado").innerText = resultado;
+
+    efeitoBoom();
+}
+
+function efeitoBoom() {
+    let boom = document.getElementById("boom");
+    boom.innerText = "💥 BOOM! 💥";
+
+    let tamanho = 10;
+
+    let intervalo = setInterval(function() {
+        tamanho += 5;
+        boom.style.fontSize = tamanho + "px";
+
+        if (tamanho > 60) {
+            clearInterval(intervalo);
+            setTimeout(() => {
+                boom.innerText = "";
+            }, 500);
+        }
+    }, 50);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Operações Matemáticas - Samuel Jesus</title>
+</head>
+<body>
+
+    <label for="numero1">Digite o primeiro número:</label>
+    <input type="number" id="numero1" placeholder="Ex: 10"><br><br>
+
+    <label for="numero2">Digite o segundo número:</label>
+    <input type="number" id="numero2" placeholder="Ex: 5"><br><br>
+
+    <button onclick="processarNumeros()">Calcular</button>
+
+    <h3>Resultados:</h3>
+    <p>Soma: <span id="soma"></span></p>
+    <p>Subtração (1 - 2): <span id="subtracao"></span></p>
+    <p>Produto: <span id="produto"></span></p>
+    <p>Divisão (1 / 2): <span id="divisao"></span></p>
+    <p>Resto da divisão (1 % 2): <span id="resto"></span></p>
+
+    <script>
+        function processarNumeros() {
+            // Receber os valores
+            var n1 = Number(document.getElementById("numero1").value);
+            var n2 = Number(document.getElementById("numero2").value);
+
+            // Calcular operações
+            var soma = n1 + n2;
+            var subtracao = n1 - n2;
+            var produto = n1 * n2;
+            var divisao = n2 !== 0 ? n1 / n2 : "Erro: divisão por zero";
+            var resto = n2 !== 0 ? n1 % n2 : "Erro: divisão por zero";
+
+            document.getElementById("soma").innerText = soma;
+            document.getElementById("subtracao").innerText = subtracao;
+            document.getElementById("produto").innerText = produto;
+            document.getElementById("divisao").innerText = divisao;
+            document.getElementById("resto").innerText = resto;
+        }
+    </script>
+
+</body>
+</html>

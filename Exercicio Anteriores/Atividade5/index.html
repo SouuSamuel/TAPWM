@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa de Filme</title>
+</head>
+<body>
+
+  <h2>🎬 Pesquisa de Opinião sobre Filme</h2>
+
+  <form id="formPesquisa">
+    <label>Idade:</label>
+    <input type="number" id="idade" required><br><br>
+
+    <label>Gênero:</label>
+    <select id="genero" onchange="verificarOutro()" required>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+      <option value="nao_binario">Não-binário</option>
+      <option value="agenero">Agênero</option>
+      <option value="genero_fluido">Gênero fluido</option>
+      <option value="outro">Outro</option>
+    </select><br><br>
+
+    <div id="campoOutro" style="display:none;">
+      <label>Especifique:</label>
+      <input type="text" id="generoOutro">
+      <br><br>
+    </div>
+
+    <label>Opinião:</label>
+    <select id="opiniao" required>
+      <option value="4">Ótimo</option>
+      <option value="3">Bom</option>
+      <option value="2">Regular</option>
+      <option value="1">Péssimo</option>
+    </select><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <br>
+
+  <button onclick="mostrarResultados()">📊 Ver Resultados</button>
+  <button onclick="teste()">🧪 Teste com 10 pessoas</button>
+  <button onclick="gerarAleatorios()">⚡ Gerar 45 aleatórios</button>
+
+  <h3 id="resultado"></h3>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
