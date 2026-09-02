@@ -1,21 +1,15 @@
-let express = require('express');
-let app = express();//executando o express
-
+let texto = require('./modulo1');
+let app = require('./app/config/server');//importando o arquivo server.js
+let rotaHome = require('./app/routes/home')(app);
+let rotaHistoria = require('./app/routes/historia')(app);
+let rotaCursos = require('./app/routes/cursos')(app);
+let rotaAdicionarUsuarios = require('./app/routes/adicionar_usuarios')(app);
 app.set('view engine', 'ejs');
-console.log("Olá o servidor com express foi carregado com sucesso");
 app.get('/', function (req, res) {
-    res.send("<html><body>Site da Fatec Sorocaba</body></html>");
+ res.render("home/index")
 });
-app.get('/historia', function (req, res) {
-    res.render("secao/historia");
-});
-app.get('/cursos', function (req, res) {
-    res.render("secao/cursos");
-});
-app.get('/professores', function (req, res) {
-    res.render("secao/professores");
-});
+
 app.listen(3000, function () {
-    console.log("servidor com express foi carregado");
+    console.log("servidor iniciaodo na porta 3000");
 
 });
