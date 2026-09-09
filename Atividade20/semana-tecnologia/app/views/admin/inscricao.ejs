@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição</title>
+</head>
+<body>
+
+    <header>
+        <h1>Inscrição no Evento</h1>
+
+        <nav>
+            <a href="/">Início</a> |
+            <a href="/sobre">Sobre</a> |
+            <a href="/programacao">Programação</a> |
+            <a href="/contato">Contato</a> |
+            <a href="/novidades">Novidades</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Formulário de Inscrição</h2>
+
+        <form>
+
+            <div>
+                <label for="nome">Nome:</label>
+                <br>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <br>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+            </div>
+
+            <br>
+
+            <div>
+                <label for="telefone">Telefone:</label>
+                <br>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(15) 99999-9999"
+                >
+            </div>
+
+            <br>
+
+            <div>
+                <label for="atividade">Atividade de interesse:</label>
+                <br>
+
+                <select id="atividade" name="atividade">
+                    <option value="">Selecione uma atividade</option>
+                    <option value="ia">
+                        Introdução à Inteligência Artificial
+                    </option>
+                    <option value="javascript">
+                        Desenvolvimento Web com JavaScript
+                    </option>
+                    <option value="sql">
+                        Banco de Dados e SQL
+                    </option>
+                    <option value="api">
+                        Desenvolvimento de APIs
+                    </option>
+                    <option value="seguranca">
+                        Segurança da Informação
+                    </option>
+                    <option value="cloud">
+                        Cloud Computing
+                    </option>
+                </select>
+            </div>
+
+            <br>
+
+            <button type="submit">
+                Enviar inscrição
+            </button>
+
+        </form>
+
+        <p>
+            <small>
+                * Este formulário é apenas uma demonstração e ainda não
+                armazena os dados.
+            </small>
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Semana de Tecnologia</p>
+    </footer>
+
+</body>
+</html>
