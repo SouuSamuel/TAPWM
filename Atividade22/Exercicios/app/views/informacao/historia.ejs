@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História - Fatec Sorocaba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        .navbar { background: #1a1d20; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #b21f24; }
+        .navbar .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .navbar .logo span { color: #b21f24; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: #ccc; text-decoration: none; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: #fff; border-bottom: 2px solid #b21f24; padding-bottom: 4px; }
+
+        .header-page { background: #1a1d20; color: white; padding: 40px 20px; text-align: center; }
+        .header-page h1 { font-size: 2.2rem; color: #fff; }
+        
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; flex: 1; }
+        .timeline-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; border-left: 5px solid #b21f24; }
+        .timeline-card h2 { color: #b21f24; margin-bottom: 10px; font-size: 1.4rem; }
+        .timeline-card p { color: #555; font-size: 1.05rem; margin-bottom: 12px; }
+
+        footer { background: #1a1d20; color: #aaa; text-align: center; padding: 20px; font-size: 0.9rem; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo"><i class="fa-solid fa-graduation-cap"></i> Fatec <span>Sorocaba</span></a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/informacao/historia" class="active">História</a></li>
+            <li><a href="/informacao/cursos">Cursos</a></li>
+            <li><a href="/informacao/professores">Professores</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-page">
+        <h1>Nossa Trajetória</h1>
+    </div>
+
+    <div class="container">
+        <div class="timeline-card">
+            <h2><i class="fa-solid fa-landmark"></i> Fundação da Instituição</h2>
+            <p>A Faculdade de Tecnologia de Sorocaba "José Crespo Gonzales" foi uma das primeiras unidades criadas pelo Centro Paula Souza no estado de São Paulo, projetada para impulsionar o polo industrial da região.</p>
+        </div>
+
+        <div class="timeline-card">
+            <h2><i class="fa-solid fa-chart-line"></i> Expansão e Pioneirismo</h2>
+            <p>Ao longo das décadas, a Fatec Sorocaba destacou-se pela criação de cursos inovadores nas áreas de Análise de Sistemas, Projetos, Fabricação Mecânica, Eletrônica e Gestão de TI, sempre alinhando teoria rigorosa à prática laboratorial.</p>
+        </div>
+
+        <div class="timeline-card">
+            <h2><i class="fa-solid fa-microscope"></i> Inovação e Pesquisa Aplicada</h2>
+            <p>Hoje, a unidade conta com laboratórios de ponta, forte integração com ecossistemas de inovação e parcerias com grandes empresas, garantindo índices de empregabilidade superiores a 90% para os alunos formados.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fatec Sorocaba - Faculdade de Tecnologia José Crespo Gonzales</p>
+    </footer>
+</body>
+</html>

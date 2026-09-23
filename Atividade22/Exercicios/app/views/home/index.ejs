@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fatec Sorocaba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        /* Navbar */
+        .navbar { background: #1a1d20; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #b21f24; }
+        .navbar .logo { color: #fff; font-size: 1.5rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .navbar .logo span { color: #b21f24; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: #ccc; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #fff; border-bottom: 2px solid #b21f24; padding-bottom: 4px; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(26, 29, 32, 0.85), rgba(26, 29, 32, 0.85)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200') center/cover; color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; color: #ddd; }
+        .btn-primary { background: #b21f24; color: white; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .btn-primary:hover { background: #8e181c; }
+
+        /* Container & Cards */
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; flex: 1; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center; border-top: 3px solid #b21f24; }
+        .card i { font-size: 2.5rem; color: #b21f24; margin-bottom: 15px; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #1a1d20; }
+        
+        /* Footer */
+        footer { background: #1a1d20; color: #aaa; text-align: center; padding: 20px; font-size: 0.9rem; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo"><i class="fa-solid fa-graduation-cap"></i> Fatec <span>Sorocaba</span></a>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/informacao/historia">História</a></li>
+            <li><a href="/informacao/cursos">Cursos</a></li>
+            <li><a href="/informacao/professores">Professores</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Bem-vindo à Fatec Sorocaba</h1>
+        <p>Ensino superior público, gratuito e de altíssima qualidade voltado para a inovação e o mercado de trabalho.</p>
+        <a href="/informacao/cursos" class="btn-primary">Conheça Nossos Cursos</a>
+    </section>
+
+    <div class="container">
+        <div class="grid-3">
+            <div class="card">
+                <i class="fa-solid fa-award"></i>
+                <h3>Tradição e Excelência</h3>
+                <p>Mais de 50 anos formando profissionais renomados e capacitados para os maiores desafios da tecnologia.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Cursos Gratuitos</h3>
+                <p>Tecnologias atualizadas com as demandas reais das indústrias e empresas da região de Sorocaba.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users-gear"></i>
+                <h3>Corpo Docente</h3>
+                <p>Professores mestres e doutores com sólida vivência acadêmica e no setor produtivo.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fatec Sorocaba - Faculdade de Tecnologia José Crespo Gonzales</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhe Professor Fatec Sorocaba</title>
+</head>
+
+<body>
+    <table border="1px" cellpadding="5px" cellspacing="0" id="tabela1">
+        <tr class="cabeca">
+            <th>ID</th>
+            <th>Nome</th>
+            <th>E-Mail</th>
+        </tr>
+        <% profs.forEach(prof => { %>
+            <tr>
+                <td><%= prof.ID_PROFESSOR %></td>
+                <td><%= prof.NOME_PROFESSOR %></td>
+                <td><%= prof.EMAIL_PROFESSOR %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+
+</html>
